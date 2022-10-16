@@ -1,0 +1,217 @@
+/* declarar as variaveis css */
+
+:root {
+  --color-text-primary: #002324;
+  --color-text-secondary: #fff;
+  --color-primary: #6608c5;
+  --color-secondary: #fff;
+}
+
+/* styles reset - usar border-box width=content+padding+border */
+* {
+  box-sizing: border-box;
+}
+
+/* estilo do body - generalizado */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0; /* tinha uma margin*/
+}
+
+footer {
+  background-color: var(--color-text-primary);
+  width: auto;
+  height: 246px;
+}
+
+/* retirar estilos da lista que vem por default assim como o padding e a margin */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 61px 0px 39px 0px;
+}
+
+/* titulo h2 é todo igual ao longo do documento*/
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+/* end of styles reset*/
+
+/* header section styles */
+.header {
+  display: flex;
+  height: 100vh; /*100% da viewport height*/
+  align-items: center; /*temos de alinhar devido ao height*/
+  justify-content: center; /* centra os items */
+}
+
+.header-content {
+  text-align: center; /*alinha o texto dentro da div*/
+}
+
+.header-title {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.4; /*distancia entre linhas este numero vezes a tamanho da font do elemento*/
+  color: var(--color-text-primary);
+}
+
+/* como nao ha mais spans pode ficar assim senao tinha de ser .header-ttitle span*/
+span {
+  color: var(--color-primary);
+}
+
+/* end of header section */
+
+/* about me section */
+.about {
+  position: relative;
+  background-color: var(--color-primary);
+  color: var(--color-text-secondary);
+  padding: 100px 0 120px;
+  margin-bottom: auto;
+  clip-path: polygon(0% 10%, 100% 10%, 100% 87%, 98% 87%, 0% 100%);
+}
+
+@media (min-width: 992px) {
+  .about-content {
+    display: flex;
+    max-width: 960px;
+    margin: 65px auto 0px auto;
+  }
+}
+
+.about p {
+  margin-top: 74px;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.about-description {
+  line-height: 28px;
+  font-weight: 400;
+  margin: 0px 0px 90px 71px;
+}
+
+.about-quote {
+  text-align: center;
+  margin-top: 88px;
+}
+
+.about-description p {
+  margin: 0px 0px 40px 0px;
+}
+
+blockquote {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 36px;
+  font-size: 24px;
+}
+
+cite {
+  font-style: normal;
+  line-height: 1.4;
+  font-weight: 400;
+}
+/* end of about me section */
+
+/* projects section styles */
+@media (min-width: 992px) {
+  .projects-article {
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.projects-article {
+  padding: 40px;
+  text-align: justify;
+}
+
+.projects-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.projects-article div {
+  padding-right: 40px;
+}
+
+.projects-article .button {
+  margin: 10px;
+}
+
+/* contacts section styles */
+.contact {
+  background-color: var(--color-primary);
+  color: var(--color-text-secondary);
+  padding-top: 150px;
+  clip-path: polygon(0% 25%, 100% 9%, 100% 100%, 0% 100%);
+}
+
+.contact-content {
+  text-align: center;
+  align-items: center;
+  padding: 0px 100px 100px 100px;
+}
+
+/* footer section styles */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-item {
+  display: inline-block; /* para conseguir dar medidas aos icones*/
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  padding: 5px; /*senao fica muito pequeno em relacao ao circulo*/
+  margin: 0px 10px 0px 10px;
+}
+
+.social-link {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+
+.github {
+  background-image: url(../../assets/icons/icon-github.png);
+}
+
+.linkedin {
+  background-image: url(../../assets/icons/icon-linkedin.png);
+}
+
+.twitter {
+  background-image: url(../../assets/icons/icon-twitter.png);
+}
+
+.youtube {
+  background-image: url(../../assets/icons/icon-youtube.png);
+}
+
+.footer-section p {
+  color: var(--color-text-secondary);
+  margin: 0px;
+}
