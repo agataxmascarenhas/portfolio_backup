@@ -41,6 +41,7 @@
   background-color: var(--color-primary);
   color: var(--color-secondary); /*cor do texto do botao*/
   border: 2px solid var(--color-primary);
+  padding: 10px 15px;
 }
 
 .button-tertiary:hover {
