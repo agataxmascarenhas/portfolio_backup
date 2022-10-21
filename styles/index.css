@@ -207,6 +207,7 @@ cite {
   border-radius: 50%;
   padding: 5px; /*senao fica muito pequeno em relacao ao circulo*/
   margin: 0px 10px 0px 10px;
+  animation: float 8s ease-in-out infinite;
 }
 
 .social-link {
@@ -225,15 +226,36 @@ cite {
   background-image: url(../../assets/icons/icon-linkedin.png);
 }
 
-.twitter {
-  background-image: url(../../assets/icons/icon-twitter.png);
-}
-
 .youtube {
   background-image: url(../../assets/icons/icon-youtube.png);
+  animation-delay: 2s;
+}
+.twitter {
+  background-image: url(../../assets/icons/icon-twitter.png);
+  animation-delay: 3s;
+}
+
+.social-link .linkedin {
+  animation-delay: 1s;
 }
 
 .footer-section p {
   color: var(--color-text-secondary);
   margin: 0px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /*The starting point of the animation is 0.*/
+  }
+  50% {
+    transform: translateY(
+      -10px
+    ); /*The middle point of the animation is -15xp. This will move the element up.*/
+  }
+  100% {
+    transform: translateY(
+      0
+    ); /*The last point of the animation is going back to the starting state of 0.*/
+  }
 }
