@@ -28,7 +28,7 @@ footer {
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 61px 0px 39px 0px;
+  margin: 61px 0px 0px 0px;
 }
 
 /* titulo h2 é todo igual ao longo do documento*/
@@ -168,7 +168,8 @@ cite {
 .projects-img {
   width: 100%;
   max-width: 400px;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .projects-article div {
@@ -195,10 +196,45 @@ cite {
 /* end of contact section */
 
 /* footer section styles */
+
+li {
+  animation: float 8s ease-in-out infinite;
+}
+li:first-child {
+  animation-delay: 1s;
+}
+
+li:nth-child(2) {
+  animation-delay: 2s;
+}
+li:nth-child(3) {
+  animation-delay: 3s;
+}
+
+li:nth-child(4) {
+  animation-delay: 4s;
+}
+
 .footer-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.icons-wrapper {
+  position: relative;
+}
+
+.icons-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
 }
 
 .social-item {
@@ -207,7 +243,11 @@ cite {
   border-radius: 50%;
   padding: 5px; /*senao fica muito pequeno em relacao ao circulo*/
   margin: 0px 10px 0px 10px;
-  animation: float 8s ease-in-out infinite;
+}
+
+.social-item:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-secondary);
 }
 
 .social-link {
@@ -228,20 +268,17 @@ cite {
 
 .youtube {
   background-image: url(../../assets/icons/icon-youtube.png);
-  animation-delay: 2s;
 }
 .twitter {
   background-image: url(../../assets/icons/icon-twitter.png);
-  animation-delay: 3s;
 }
 
 .social-link .linkedin {
-  animation-delay: 1s;
 }
 
 .footer-section p {
   color: var(--color-text-secondary);
-  margin: 0px;
+  margin: 39px 0px;
 }
 
 @keyframes float {
@@ -250,7 +287,7 @@ cite {
   }
   50% {
     transform: translateY(
-      -10px
+      -20px
     ); /*The middle point of the animation is -15xp. This will move the element up.*/
   }
   100% {
