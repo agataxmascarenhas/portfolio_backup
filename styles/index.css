@@ -281,6 +281,12 @@ li:nth-child(4) {
   margin: 39px 0px;
 }
 
+@media (max-width: 767px) {
+  .footer-section p {
+    text-align: center;
+  }
+}
+
 @keyframes float {
   0% {
     transform: translateY(0); /*The starting point of the animation is 0.*/
